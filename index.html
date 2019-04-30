@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/json2/20140204/json2.js'></script>
+    <script src='noDuplicate.js'></script>
+    <link rel='stylesheets' href='style.css' />
+  </head>
+  <body>
+  </head>
+  <body>
+    <label><b>Array 1</b></label>
+    <div id="arr1">
+      fabio.benedetti1@iit.cnr.it, fabio.benedetti2@iit.cnr.it, fabio.benedetti3@iit.cnr.it, fabio.benedetti1@iit.cnr.it, fabio.benedetti4@iit.cnr.it, fabio.benedetti3@iit.cnr.it
+    </div><br>
+
+
+    <label><b>Result:</b></label>
+    <div id="res">
+      fabio.benedetti1@iit.cnr.it, fabio.benedetti2@iit.cnr.it, fabio.benedetti3@iit.cnr.it, fabio.benedetti4@iit.cnr.it
+    </div><br><br>
+
+    <pre style="border: 1px solid black; padding: 5px; max-width: 500px;">
+    <label><b>Code:</b></label><br>
+    var objs = [{email:'fabio.benedetti1@iit.cnr.it'},
+                {email:'fabio.benedetti2@iit.cnr.it'},
+                {email:'fabio.benedetti3@iit.cnr.it'},
+                {email:'fabio.benedetti1@iit.cnr.it'},
+                {email:'fabio.benedetti4@iit.cnr.it'},
+                {email:'fabio.benedetti3@iit.cnr.it'}];
+
+    console.log("DUPLICATED OBJECT");
+
+    console.log("Objects: "+objs.length);
+
+    console.log(" \n\rNON DUPLICATED OBJECT");
+
+    var noDup = noDuplicate(objs);
+
+    console.log("Objects: "+noDup.length);
+    </pre>
+    <p>Activate javascript console to see result.</p>
+
+    <script type="text/javascript">
+      var objs = [{email:'fabio.benedetti1@iit.cnr.it'}, {email:'fabio.benedetti2@iit.cnr.it'}, {email:'fabio.benedetti3@iit.cnr.it'}, {email:'fabio.benedetti1@iit.cnr.it'}, {email:'fabio.benedetti4@iit.cnr.it'}, {email:'fabio.benedetti3@iit.cnr.it'}];
+
+      console.log("DUPLICATED OBJECT");
+      for(i=0; i<objs.length; i++){
+        console.log(objs[i]);
+      }
+      console.log("Objects: "+objs.length);
+
+      console.log(" \n\rNON DUPLICATED OBJECT");
+
+      var noDup = noDuplicate(objs);
+      for(i=0; i < noDup.length; i++){
+        console.log(noDup[i]);
+      }
+      console.log("Objects: "+noDup.length);
+    </script>
+  </body>
+</html>
